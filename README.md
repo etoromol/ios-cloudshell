@@ -6,9 +6,11 @@ This custom solution is written in [Hashicorp Configuration Language (HCL)](http
 
 With this solution, you can say goodbye to manual configurations and hello to a fully automated and customizable deployment process. 
 
+
 ## ¿Why Terraform?
 
 By using [Terraform](https://developer.hashicorp.com/terraform/intro), you can save time, reduce errors, and ensure consistency across your network infrastructure. With its powerful automation capabilities and flexibility, you'll be able to deploy Cisco Virtual Routers like never before.
+
 
 ## Prerequisites
 
@@ -16,6 +18,7 @@ To deploy this infrastructure you will need:
 * [AWS account](https://aws.amazon.com/free/).
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) (2.10.4+) installed.
 * [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started) (0.14.9+) installed.
+* [Git](https://git-scm.com) (2.37.1+) installed.
 
 
 ## Installation
@@ -30,9 +33,13 @@ cd ios-cloudshell
 terraform init
 ```
 
+
 ## Configuration
 
-3. (optional) If you haven't already authenticated your AWS account in AWS CLI, please complete the following step, which will prompt you to enter your AWS Access Key ID and Secret Access Key for verification.
+3. (optional) If you haven't already authenticated your AWS account in AWS CLI, please complete the following steps:
+
+* Create a new Access Key on [My security credentials](https://console.aws.amazon.com/iam/home?#/security_credentials).
+* Enter your AWS Access Key ID and Secret Access Key for verification.
 ```bash
 aws configure
 ```
@@ -48,6 +55,7 @@ variable "project" {
   }
 }
 ```  
+
 
 ## Deployment
 
